@@ -2,7 +2,7 @@ const assertArraysEqual = (actual, expected) => {
   let isEqual = eqArrays(actual, expected);
   
   return console.log(isEqual ? `🌺Assertion Passed: ${actual} === ${expected}` : `💀Assertion Failed: ${actual} !== ${expected}`);
-}
+};
 
 const eqArrays = (actual, expected) => {
   // make sure both arrays are the same length
@@ -20,20 +20,20 @@ const eqArrays = (actual, expected) => {
 
   // return false if there are any inequalities
   return false;
-}
+};
 
 const middle = arr => {
   let midElements = [];
-  if (arr.length <= 2){
+  if (arr.length <= 2) {
     return midElements;
   }
 
-  if (arr.length % 2 === 0){
-    midElements.push(arr[(arr.length/2 - 1)] , arr[arr.length/2]);
+  if (arr.length % 2 === 0) {
+    midElements.push(arr[(arr.length / 2 - 1)] , arr[arr.length / 2]);
     return midElements;
   }
 
-  midElements.push(arr[Math.floor(arr.length/2)])
+  midElements.push(arr[Math.floor(arr.length / 2)]);
   return midElements;
 };
 
