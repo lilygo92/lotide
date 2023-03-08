@@ -1,18 +1,25 @@
 const assertArraysEqual = (actual, expected) => {
+  let bool = eqArrays(actual, expected);
+  
+  return console.log(bool ? `🌺Assertion Passed: ${actual} === ${expected}` : `💀Assertion Failed: ${actual} !== ${expected}`);
+};
+
+const eqArrays = (actual, expected) => {
+  // make sure both arrays are the same length
   if (actual.length === expected.length) {
     // loop through both arrays at the same time, checking each value
     for (let i = 0; i < actual.length; i++) {
-      // break the loop and fail assertion if there are any inequalities
+      // break the loop and return false if there are any inequalities
       if (actual[i] !== expected[i]) {
-        return console.log(`💀Assertion Failed: ${actual} !== ${expected}`);
+        return false;
       }
     }
-    // pass assertion if everything is equal
-    return console.log(`🌺Assertion Passed: ${actual} === ${expected}`);
+    // return true if everything is equal
+    return true;
   }
-  
-  // fail assertion if there are any inequalities
-  return console.log(`💀Assertion Failed: ${actual} !== ${expected}`);
+
+  // return false if there are any inequalities
+  return false;
 };
 
 const without = (arr, remove) => {
