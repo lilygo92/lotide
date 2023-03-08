@@ -1,7 +1,7 @@
 const assertArraysEqual = (actual, expected) => {
-  let bool = eqArrays(actual, expected);
+  let isEqual = eqArrays(actual, expected);
   
-  return console.log(bool ? `🌺Assertion Passed: ${actual} === ${expected}` : `💀Assertion Failed: ${actual} !== ${expected}`);
+  return console.log(isEqual ? `🌺Assertion Passed: ${actual} === ${expected}` : `💀Assertion Failed: ${actual} !== ${expected}`);
 };
 
 const eqArrays = (actual, expected) => {
