@@ -17,17 +17,4 @@ const flatten = (arr) => {
   return flattened;
 };
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
-
-
-// loop through flattened
-// check if flattened[i] is an array
-// loop through flattened[i]
-// splice flattened[i] with the elements of flattened[i]
-//
-
-// empty array
-// loop through arr
-// check if arr[i] is an array
-// conditional to push? or loop then push
-
+module.exports = flatten;
